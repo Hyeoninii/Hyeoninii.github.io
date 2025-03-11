@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "[Github 블로그 만들기] 오류 해결"
 categories: [깃허브 블로그]
 tags: [GitHub, blog, error]
