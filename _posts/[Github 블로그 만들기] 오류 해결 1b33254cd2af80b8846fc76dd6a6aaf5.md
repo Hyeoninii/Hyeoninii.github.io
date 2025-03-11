@@ -1,19 +1,18 @@
 ---
 title: "[Github 블로그 만들기] 오류 해결"
-categories:
-	- 깃허브 블로그
-tags:
-	- [GitHub, blog, error]
-date: 2025-03-11
+categories: [깃허브 블로그]
+tags: [GitHub, blog, error]
+date: 2025-03-11 22:30:00 +0900
 last_modified_at: 2025-03-11
 ---
+
 # [Github 블로그 만들기] 오류 해결
 
 MARCH 11, 2025
 
-[Hyeoninii](https://blogs.getty.edu/iris/author/shwetasaraswat/)
+[Hyeoninii](https://github.com/Hyeoninii)
 
-블로그 만들다가 생긴 문제점
+## 블로그 만들다가 생긴 문제점
 
 다른 블로그를 보면서 Chirpy 테마를 적용하다가 actions에서 계속 같은 오류로 페이지에 테마가 적용되지 않았다.
 
