@@ -43,10 +43,13 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
+        # bootstrap 설치 추가
       - name: Install Bootstrap
         run: npm install bootstrap
-      - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
+      
+      - name: Build with Jekyll  
+      # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
