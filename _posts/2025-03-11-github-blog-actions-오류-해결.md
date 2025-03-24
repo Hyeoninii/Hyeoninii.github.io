@@ -7,8 +7,6 @@ date: 2025-03-11 22:30:00 +0900
 last_modified_at: 2025-03-19
 ---
 
-# 
-
 Chirpy 테마를 적용하는 과정에서 GitHub Actions에서 오류가 발생했다.
 
 오류 메시지:
@@ -37,7 +35,7 @@ jekyll.yml 파일에서 **부트스트랩을 설치**하는 과정을 추가해�
   run: npm install bootstrap #커맨드
 ```
 
-**수정 후 `jekyll.yml` 예시**
+**수정 후 `jekyll.yml` 예시**  
 ![jekyll.yml 파일](/assets/img/post_image/2025-03-11/sc2.png)
 
 ---
@@ -48,7 +46,7 @@ jekyll.yml 파일에서 **부트스트랩을 설치**하는 과정을 추가해�
 @use 'bootstrap';
 ```
 
-**수정 후 `main.bundle.scss` 예시**
+**수정 후 `main.bundle.scss` 예시**  
 ![main.bundle.scss 파일](/assets/img/post_image/2025-03-11/sc3.png)
 
 ---

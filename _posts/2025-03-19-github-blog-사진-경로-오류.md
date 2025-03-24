@@ -20,7 +20,7 @@ Actions 오류를 해결한 후에 새로운 문제가 생겼다.
 ### 1. 사진 경로 설정
 사진이 정상적으로 표시되려면 사진을 `assets/img` 하위에 저장해야한다. 그래서 `assets/img` 폴더 안에 `post_imgae` 폴더를 추가하고, 날짜별로 정리했다. 
 
-> **📌reference**
+> **📌reference**  
 > Markdown에서는 **`![사진 설명](사진 경로)`** 형식으로 이미지를 업로드한다.  
 예를 들어, `![오류 사진](/assets/img/post_image/2025-03-19/sc1.png)`처럼 작성하면 된다.
 만약 사진 크기를 조절하려면 `img 태그`를 사용해야 한다.  
@@ -28,11 +28,13 @@ Actions 오류를 해결한 후에 새로운 문제가 생겼다.
 
 ✅ **수정된 사진**
 ![수정된 사진](/assets/img/post_image/2025-03-19/sc2.png)
+
 ---
 
 ### 2. `_config.yml` 파일 수정
 `_config.yml` 파일에서 `cdn`관련 설정을 주석 처리했다.
 ![_config.yml 파일 수정](/assets/img/post_image/2025-03-19/sc3.png)
+
 ---
 
 ### 3. 프로필 사진 수정
