@@ -54,7 +54,7 @@ jekyll.yml 파일에서 **부트스트랩을 설치**하는 과정을 추가해�
 ### 3. `_config.yml` 수정
 부트스트랩이 설치된 디렉토리를 Jekyll이 인식할 수 있도록 `_config.yml` 파일에서 `main.bundle.scss`의 경로를 변경한다.
 
-**수정 후 `_config.yml` 예시**
+**수정 후 `_config.yml` 예시**  
 ![_config.yml 파일 경로 변경](/assets/img/post_image/2025-03-11/sc4.png)
 
 ---
