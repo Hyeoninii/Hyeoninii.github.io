@@ -45,8 +45,8 @@ jobs:
         uses: actions/configure-pages@v5
 
         # bootstrap 설치 추가
-      - name: Install Bootstrap
-        run: npm install bootstrap
+      #- name: Install Bootstrap
+      #  run: npm install bootstrap
       
       - name: Build with Jekyll  
       # Outputs to the './_site' directory by default
