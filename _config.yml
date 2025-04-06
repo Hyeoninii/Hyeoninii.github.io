@@ -37,7 +37,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Jonghyeon Park
+  name: 박종현
   email: hyeoninii0314@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
@@ -126,7 +126,7 @@ comments:
     category: "General"
     category_id: "DIC_kwDOODaKQs4CorWv"
     mapping: pathname
-    strict: # optional, default to '0'
+    strict: 0
     input_position: bottom
     lang: ko
     reactions_enabled: 1
