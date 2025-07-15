@@ -19,7 +19,7 @@ timezone: Asia/Seoul
 
 title: Hyeoninii's 블로그 # the main title
 
-tagline: 충남대 재학 # it will display as the subtitle
+tagline: CNU CSE # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   testing 
