@@ -12,7 +12,7 @@ order: 5
 {: .prompt-tip }
 
 ### ❓ Question
-- [25-07-16]
+[25-07-16]
 
 > ### 자바에서 String은 불변 객체로써 메모리에 저장되고, 변하게 되면 새로운 객체를 생성한다. System.out.println("test1" + "test2")를 했을 때 어떻게 저장되는가?
 >
@@ -32,6 +32,9 @@ order: 5
 > 이런 경우에는 "test"가 상수 풀(b의 참조)에 저장되지만, 별개로 new로 선언한 String객체(a의 참조)도 힙에 따로 생성된다.  
 > System.out.print(a==b) //false
 
+[25-07-18]
+
+> ### JVM의 메서드 영역은 어떻게 나뉘는가?
 
 
 ---
