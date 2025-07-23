@@ -4,7 +4,7 @@ title: "[블록체인] 노드 연결 - Sepolia 테스트넷"
 categories: [블록체인]
 tags: [블록체인, blockchain, Sepolia, 이더리움, testnet]
 date: 2025-05-27 17:30:00 +0900
-last_modified_at: 2025-05-27
+last_modified_at: 2025-07-23
 ---
 
 ## 실행 환경
@@ -30,60 +30,60 @@ last_modified_at: 2025-05-27
 
 ### 1. 필수 패키지 설치
     
-    ```bash
+```bash
     sudo apt update && sudo apt upgrade -y
     sudo apt install -y git curl wget build-essential unzip
     sudo apt install tmux -y    // 터미널 세션 관리 도구(터미널 분할 목적)
     sudo apt install golang -y  // golang설치
-    ```
+```
     
 ### 2. Geth 설치
     
-    ```bash
+```bash
     git clone https://github.com/ethereum/go-ethereum.git
     cd go-ethereum
     make geth      // geth 빌드
     sudo cp build/bin/geth /usr/local/bin/      // geth 실행 파일을 시스템 경로로 복사
     geth version      // 설치 확인
-    ```
+```
     
-    > git clone시 ssh 인증을 해야할 때
-    > 
+> git clone시 ssh 인증을 해야할 때
+> 
     
 ### 3. JWT 파일 생성 (Geth ↔ Prysm 통신용)
     
-    ```bash
+```bash
     openssl rand -hex 32 | tr -d "\n" > ~/jwt.hex
-    ```
+```
     
-    이더리움에서는 PoS체제로 바뀌면서 두 개의 클라이언트 계층을 사용한다고 했다. 이 때 Execution Layer와 Consensus Layer가 서로 통신을 하기 위해서 인증 토큰으로 JWT를 사용한다.
-    
-    **JWT**: Json Web Token, 암호화된 인증 토큰, 통신의 무결성과 보안성을 보장
-    
-    **JSON-RPC**: Execution Layer가 제공하는 표준 HTTP API, 이더리움 노드와 외부 애플리케이션(지갑, DApp, FE)과 
+이더리움에서는 PoS체제로 바뀌면서 두 개의 클라이언트 계층을 사용한다고 했다. 이 때 Execution Layer와 Consensus Layer가 서로 통신을 하기 위해서 인증 토큰으로 JWT를 사용한다.
+
+**JWT**: Json Web Token, 암호화된 인증 토큰, 통신의 무결성과 보안성을 보장
+
+**JSON-RPC**: Execution Layer가 제공하는 표준 HTTP API, 이더리움 노드와 외부 애플리케이션(지갑, DApp, FE)과 
     
 ### 4. Prysm 설치
     
-    ```bash
+```bash
     git clone https://github.com/prysmaticlabs/prysm.git
     cd prysm
     chmod +x prysm.sh
-    ```
+```
     
 ### 5. 터미널 분할
     
-    ```bash
+```bash
     tmux
     Ctrl + B 입력 -> %(가로 분할) or "(세로 분할)
-    ```
+```
     
-    Geth와 Prysm을 같이 실행하기 위해서 tmux로 터미널을 분할해준다.
+Geth와 Prysm을 같이 실행하기 위해서 tmux로 터미널을 분할해준다.
     
-    ![image.png](/assets/img/post_image/2025-05-27/image1.png)
+![image.png](/assets/img/post_image/2025-05-27/image1.png)
 
 ### 6. Geth 실행 (Sepolia + AutoRPC 설정)
     
-    ```bash
+```bash
     geth --sepolia \
       --syncmode "snap" \
       --http \
@@ -93,18 +93,18 @@ last_modified_at: 2025-05-27
       --authrpc.jwtsecret=$HOME/jwt.hex \
       --authrpc.addr=localhost \
       --authrpc.port=8551
-    ```
+```
     
 ### 7. Prysm beacon-chain 실행 (Geth 연결)
     
-    ```bash
+```bash
     cd ~/prysm
     ./prysm.sh beacon-chain \
       --sepolia \
       --jwt-secret=$HOME/jwt.hex \
       --execution-endpoint=http://localhost:8551 \
       --checkpoint-sync-url=https://sepolia.checkpoint-sync.ethpandaops.io
-    ```
+```
     
 
 우분투에서 두 노드를 동시에 실행시켜야 한다.
